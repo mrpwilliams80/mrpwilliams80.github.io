@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice BSL Alphabet</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="column" id="controls">
+
+        <div>
+            <label for="speed">SPEED</label>
+            <div class="main_button_row" id="speed">
+                <div class="button main_button flip_x" id="slow" onclick="speed_select(this.id, 5000)">
+                    &#128034;
+                </div>
+                <div class="button main_button flip_x selected" id="med" onclick="speed_select(this.id, 3000)">
+                    &#128007;
+                </div>
+                <div class="button main_button flip_x" id="fast" onclick="speed_select(this.id, 1000)">
+                    &#128006;
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label for="speed">TIME</label>
+            <div class="main_button_row" id="time">
+                <div class="button main_button number" id="five_min" onclick="time_select(this.id, 5)">
+                    5
+                </div>
+                <div class="button main_button number selected" id="ten_min" onclick="time_select(this.id, 10)">
+                    10
+                </div>
+                <div class="button main_button text" id="custom_time" onclick="time_select(this.id, -1)">
+                    Custom
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label for="range">PRACTICE</label>
+            <div class="main_button_row" id="range">
+                <div class="button main_button text" id="vowels" onclick="range_select(this.id)">
+                    Vowels
+                </div>
+                <div class="button main_button text selected" id="all" onclick="range_select(this.id)">
+                    All
+                </div>
+                <div class="button main_button text" id="custom_range" onclick="range_select(this.id)">
+                    Custom
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column" id="cards">
+        <p id="letter">A</p>
+        <img id="hand_sign" src="signs/1.svg">
+    </div>
+
+    <div class="column" id="start_stop">
+        <div class="button text start" id="start_stop_btn" onclick="start_stop(this)">
+            START
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
